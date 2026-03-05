@@ -1,3 +1,4 @@
 image:
-  repository: aim-hospital-app
+  repository: ayush647dockerhub/aim-hospital-app
+  pullPolicy: IfNotPresent
   tag: "latest"
