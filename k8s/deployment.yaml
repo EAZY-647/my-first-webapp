@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aim-hospital-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aim-hospital
+  template:
+    metadata:
+      labels:
+        app: aim-hospital
+    spec:
+      containers:
+      - name: aim-hospital-container
+        image: aim-hospital-app:latest
+        ports:
+        - containerPort: 80
